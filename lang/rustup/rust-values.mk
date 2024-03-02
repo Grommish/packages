@@ -77,3 +77,9 @@ CARGO_PKG_CONFIG_VARS = \
 	RUSTUP_HOME=$(RUSTUP_HOME) \
 	TARGET_CC=$(TARGET_CC_NOCACHE) \
 	TARGET_CFLAGS="$(TARGET_CFLAGS) $(RUSTUP_CFLAGS)"
+
+CARGO_PKG_CONFIG_ARGS = \
+	+nightly \
+	-Z unstable-options \
+	-Z build-std build \
+	--release
